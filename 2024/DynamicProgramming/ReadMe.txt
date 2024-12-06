@@ -25,6 +25,20 @@ There are 2 ways to implement a DP algorithm.
   2.) Top-down, also known as memoization
           - Top-down is implemented with recursion and made efficient with memoization.
           - memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply return the memoized result instead of recalculating the result.
+          ```
+          // Pseudocode example for top-down
+          
+          memo = hashmap
+          Function F(integer i):
+              if i is 0 or 1: 
+                  return i
+              if i doesn't exist in memo:
+                  memo[i] = F(i - 1) + F(i - 2)
+              return memo[i]
+          ```
+
+A bottom-up implementation's runtime is usually faster, as iteration does not have the overhead that recursion does.
+A top-down implementation is usually much easier to write. This is because with recursion, the ordering of subproblems does not matter, whereas with tabulation, we need to go through a logical ordering of solving subproblems.
 
 
 
