@@ -13,6 +13,15 @@ Divide & Conquer Algorithms - break a problem into subproblems, but these subpro
 There are 2 ways to implement a DP algorithm. 
   1.) Bottom-up, also known as tabulation
           - Bottom-up is implemented with iteration and starts at the base cases
+          ```
+          // Pseudocode example for bottom-up
+          
+          F = array of length (n + 1)
+          F[0] = 0
+          F[1] = 1
+          for i from 2 to n:
+              F[i] = F[i - 1] + F[i - 2]
+          ```
   2.) Top-down, also known as memoization
           - Top-down is implemented with recursion and made efficient with memoization.
           - memoizing a result means to store the result of a function call, usually in a hashmap or an array, so that when the same function call is made again, we can simply return the memoized result instead of recalculating the result.
